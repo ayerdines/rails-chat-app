@@ -22,6 +22,12 @@
                   <div class="chat_people">
                     <div class="chat_img">
                       <span class="badge"></span>
+<!--                      TODO move this code to jquery to update online status through AJAX on each page visit -->
+                      <% if chat.is_online %>
+                        <span class="dot online"></span>
+                      <% else %>
+                        <span class="dot offline"></span>
+                      <% end %>
                       <%= image_tag('crop.jpeg', {class: 'rounded-circle z-depth-0', alt: 'avatar', height: '35'}) %>
                     </div>
                     <div class="chat_ib">

@@ -172,3 +172,23 @@ img{ max-width:100%;}
   background: red;
   color: white;
 }
+
+.dot.offline {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  right: -5px;
+  top: 20px;
+}
+
+.dot.online {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background-color: green;
+  border-radius: 50%;
+  right: -5px;
+  top: 20px;
+}

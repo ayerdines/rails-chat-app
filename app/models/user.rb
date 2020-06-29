@@ -43,4 +43,22 @@ class User < ApplicationRecord
   # def send_reset_password_instructions
   #   super if invitation_token.nil?
   # end
+
+  def is_online
+    redis = Redis.new
+    Rails.logger.info "checking is user #{id} is online: " + redis.get("user_#{self.id}")
+    redis.get("user_#{self.id}") == 'online'
+  end
+
+  def online
+    redis = Redis.new
+    Rails.logger.info('User set online')
+    redis.set("user_#{self.id}", 'online')
+  end
+
+  def offline
+    redis = Redis.new
+    Rails.logger.info('User set offline')
+    redis.set("user_#{self.id}", 'offline')
+  end
 end

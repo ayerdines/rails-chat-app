@@ -63,3 +63,5 @@ gem "pg", "~> 1.2"
 # Used in seeds to generate fake data
 
 gem "faker", "~> 2.13", :group => :development
+
+gem "redis", "~> 4.2"
